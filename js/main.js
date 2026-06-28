@@ -230,3 +230,20 @@ console.log(`
 Thanks for visiting 🚀
 
 `);
+/* =========================
+LOGO CLICK SCROLL
+========================= */
+
+const logo = document.querySelector(".logo");
+const heroSection = document.getElementById("home");
+
+if (logo && heroSection) {
+    logo.style.cursor = "pointer";
+
+    logo.addEventListener("click", () => {
+        heroSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    });
+}
